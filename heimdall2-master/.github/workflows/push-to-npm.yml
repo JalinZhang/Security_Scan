@@ -1,0 +1,47 @@
+name: Push Heimdall-Lite to NPM and GitHub Packages and Push InspecJs to NPM
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@master
+
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install project dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Pack all items that are published as packages
+        run: yarn pack:all
+
+      - name: Publish Heimdall Lite to NPM
+        run: npm publish --access public apps/frontend/mitre-heimdall-lite*.tgz
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish InSpecJS to NPM
+        run: npm publish --access public libs/inspecjs/inspecjs*.tgz
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      # Setup .npmrc file to publish to GitHub Packages
+      - uses: actions/setup-node@v1
+        with:
+          registry-url: 'https://npm.pkg.github.com'
+
+      - name: Publish Heimdall Lite to GitHub Packages
+        run: npm publish --access public apps/frontend/mitre-heimdall-lite*.tgz
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish InspecJS to GitHub Packages
+        run: npm publish --access public libs/inspecjs/inspecjs*.tgz
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

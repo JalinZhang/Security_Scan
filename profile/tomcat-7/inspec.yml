@@ -1,0 +1,9 @@
+name: apache-tomcat-7-cis-baseline
+title: apache-tomcat-7-cis-baseline
+maintainer: The MITRE Corporation
+copyright: The MITRE Corporation
+copyright_email: saf@groups.mitre.org
+license: Apache-2.0
+summary: "InSpec Validation Profile for Apache Tomcat 7 CIS"
+version: 0.1.1
+inspec_version: ">= 4.0"

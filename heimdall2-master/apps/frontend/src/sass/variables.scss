@@ -1,0 +1,43 @@
+$font-size-root: 14px;
+
+$code-background-color: '#272727';
+
+$material-dark-elevation-colors: (
+  '0': #303030,
+  '1': #3e3e3e,
+  '2': #2f2f2f,
+  '3': #323232,
+  '4': #272727,
+  '6': #3e3e3e,
+  '8': #3e3e3e,
+  '12': #3e3e3e,
+  '16': #3e3e3e,
+  '24': #3e3e3e
+);
+
+$material-dark: (
+  'background': map_get($material-dark-elevation-colors, '0'),
+  'surface': map_get($material-dark-elevation-colors, '0'),
+  'bg-color': map_get($material-dark-elevation-colors, '1'),
+);
+
+$snackbar-z-index: 1999;
+
+// The following SCSS variables are for virtical slimming
+
+// v-card
+$card-actions-padding: 4px 8px;
+$card-subtitle-padding: 8px 16px;
+$card-btn-padding: 0px 4px;
+
+// v-app-bar
+$app-bar-scrolled-title-padding-bottom: 6px;
+
+// v-dialog (Modal)
+$dialog-card-subtitle-padding: 0px 12px 10px !default;
+$dialog-card-actions-padding: 4px 16px !default;
+$dialog-card-text-padding: 0px 24px 10px !default;
+$dialog-card-title-padding: 8px 24px 5px !default;
+
+// v-tabs
+$tabs-icons-and-text-bar-height: 50px !default;

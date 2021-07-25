@@ -1,0 +1,61 @@
+# encoding: utf-8
+#
+# This is an example of an attributes file that can be passed to the profile
+# to override the defaults of the attributes defined in each of the tests.
+# You can use this to automatically adjust your tests when using automation or
+# progromatic deployment or validation of differnt deployment patterns without
+# having to adjust the core profile.
+
+# Description: Tomcat home Directory
+tomcat_home: '/usr/share/tomcat'
+
+# Description: Tomcat Directory for additional servers
+tomcat_base: '/usr/share/tomcat'
+
+# Description: Tomcat App Directory
+tomcat_app_dir: '/var/lib/tomcat'
+
+# Description: Tomcat library Directory
+tomcat_lib_dir: '/usr/share/java/tomcat'
+
+# Description: Tomcat service Name
+tomcat_service_name: 'tomcat'
+
+# Description: Tomcat username
+tomcat_user: 'tomcat'
+
+# Description: Port of the tomcat instance
+tomcat_port: '8084'
+
+# Description: Server Info value
+tomcat_server_info: 'server.info=Apache Tomcat/7.0.76'
+
+# Description: Server Number value
+tomcat_server_number: 'server.number=7.0.76.0'
+
+# Description: Server Built value
+tomcat_server_built: 'server.built=Oct 30 2017 10:21:55 UTC'
+
+# Description: Tomcat server configuration file
+tomcat_conf_server: '/usr/share/tomcat/conf/server.xml'
+
+# Description: Tomcat web configuration file
+tomcat_conf_web: '/usr/share/tomcat/conf/web.xml'
+
+# Description: Group owner of files/directories
+tomcat_group: 'tomcat'
+
+# Description: User owner of files/directories
+tomcat_owner: 'tomcat_admin'
+
+# Description: A list of Realms that should not be enabled
+tomcat_realms_list: ['org.apache.catalina.realm.MemoryRealm',
+                    'org.apache.catalina.realm.JDBCRealm',
+                    'org.apache.catalina.realm.UserDatabaseRealm',
+                    'org.apache.catalina.realm.JAASRealm']
+
+# Description: List of extraneous resources that should not exist
+tomcat_extraneous_resource_list: ["webapps/docs",
+                                  "webapps/examples",
+                                  "webapps/host-manager",
+                                  "webapps/manager"]

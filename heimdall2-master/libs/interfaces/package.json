@@ -1,0 +1,11 @@
+{
+  "name": "@heimdall/interfaces",
+  "version": "2.4.6",
+  "private": true,
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "lint": "eslint \"**/*.ts\" --fix",
+    "lint:ci": "eslint \"**/*.ts\" --max-warnings 0"
+  }
+}

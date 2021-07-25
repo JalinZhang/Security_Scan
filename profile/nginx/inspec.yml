@@ -1,0 +1,11 @@
+---
+name: nginx-baseline
+title: DevSec Nginx Baseline
+maintainer: DevSec Hardening Framework Team
+copyright: DevSec Hardening Framework Team
+copyright_email: hello@dev-sec.io
+license: Apache-2.0
+summary: Test-suite for best-practice nginx hardening
+version: 2.4.2
+supports:
+    - os-family: unix

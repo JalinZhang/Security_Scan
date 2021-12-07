@@ -19,7 +19,7 @@ print('''
 
 
 def run():
-    print('Welcome To SecurityScan Tool !!!\n Readme：https://sipc.yuque.com/sipc/security/qbmm5x')
+    print('Welcome To SecurityScan Tool !!!\n Readme：https://github.com/JalinZhang/Security_Scan')
     print(banner)
     Weblogic_Console()
 
